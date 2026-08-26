@@ -1,6 +1,6 @@
 :root {
     --bg-dark: oklch(0.91 0.005 280);
-    --bg: oklch(0.96 0.005 280);
+    --bg: oklch(0.99 0.005 280);
     --bg-light: oklch(1 0.005 280);
 
     --text: oklch(0.32 0.01 280);
