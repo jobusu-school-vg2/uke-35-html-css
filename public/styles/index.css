@@ -3,23 +3,24 @@ html {
 }
 
 body {
-    background-color: var(--bg-light);
+    background-color: var(--bg);
     margin-bottom: var(--padding-1);
 }
 
 main {
     margin: auto;
-    width: min(95vw, 1000px);
+    width: min(95vw, 900px);
 
     display: grid;
     grid-template-columns: 5fr 2fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
     "article-header article-header"
+    "article-illustration article-illustration"
     "article table-of-contents";
 
     gap: var(--padding-1);
-    padding: var(--padding-2) 0;
+    padding: var(--padding-1) 0;
 }
 
 .article-header {
@@ -28,9 +29,26 @@ main {
     gap: var(--padding-2);
 
     grid-area: article-header;
+
+    h1 {
+        line-height: 3rem;
+    }
+}
+
+.article-illustration {
+    display: flex;
+    grid-area: article-illustration;
+
+    img {
+        width: 100%;
+        border-radius: var(--radius-1);
+        border: 1px solid var(--border-muted);
+    }
 }
 
 .table-of-contents {
+    background-color: var(--bg-light);
+
     height: fit-content;
 
     display: flex;
